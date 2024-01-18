@@ -1,23 +1,23 @@
-/*Google fonts import*/
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser*/
+/* Asterisk wildcard selector to override default styles added by browser*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* General styles*/
 body {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-/* Generic project styles */ 
-color: #3a3a3a; 
-font-family: 'Lato', sans-serif;  
-}
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles*/
+    color: 3a3a3a;
+    font-family: 'Lato', sans-serif;
 
+}
 
 /* Header */
 header {
@@ -38,9 +38,9 @@ header a {
 }
 
 h1 {
-    font-family: 'Osval', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing:  2px;
+    letter-spacing: 2px;
     color: #252525;
 }
 
@@ -48,17 +48,19 @@ h1 {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
+
 }
 
-#menu > li{
+#menu>li {
     margin-bottom: 1em;
+
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* Navbar styles with dropdown toggle*/
+/* Navbar styles with dropdown toogle*/
 nav {
     position: absolute;
     background-color: #ffffff;
@@ -71,7 +73,7 @@ nav {
 
 }
 
-/* Nav toggle*/
+/* Navbar toggle*/
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -87,12 +89,38 @@ nav {
 /* Main content*/
 main {
     background-color: lightblue;
-    /* Make main element take up any surplus space to push footer down */
+    /* Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
-    margin-top: 80px;
+    margin-top: 47px;
 }
 
-/* Footer */
-footer {
-    background-color: orange;
+/* Media query: tablets and larger (768px and up)*/
+@media screen and (min-width: 768px) {
+    /* Header*/
+    nav{
+         display: block;
+         position: relative;
+         box-shadow: none;
+         width: fit-content;
+         padding-right: 1rem;
+ }
+
+     #menu {
+     display: flex;
+ }
+
+     #menu>li {
+     padding-left: 1rem;
+ }
+
+    .nav-toggle-label {
+     display: none;
+ }
+
+    #logo {
+     font-size: 200%;
+     line-height: 75px;
+     margin: 0 0.5rem;
+ }
+    
 }
